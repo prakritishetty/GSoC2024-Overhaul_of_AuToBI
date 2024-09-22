@@ -35,6 +35,24 @@ def preprocess_function(examples):
     inputs["labels"] = examples["label"]
     return inputs
 
+import random
+import numpy as np
+
+def time_shift(audio, shift_max, sample_rate):
+    shift = int(random.random() * shift_max * sample_rate)
+    return np.roll(audio, shift)
+
+def add_noise(audio, noise_level):
+    noise = np.random.randn(len(audio))
+    augmented = audio + noise_level * noise
+    return augmented
+
+def augment_audio(audio):
+    augmented = time_shift(audio, 0.2, 16000)  
+    augmented = add_noise(augmented, 0.005)
+    return augmented
+
+
 dataset_encoded = dataset.map(
     preprocess_function,
     batched= True,
