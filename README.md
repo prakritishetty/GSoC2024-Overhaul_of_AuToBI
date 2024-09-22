@@ -13,6 +13,8 @@ First get access to the Boston University Radio Speech Corpus (BURSC) data.
 Save and compress the audio files into a folder called BURSC_AUDIO_FINAL. These files will be in the SPH format, and our next step will be to use the 1_SPHtoWAV.py file to convert all the SPH files to a more recognizable WAV format for audio files. The output folder of WAV files will be called WAV_BURSC_AUDIO_FINAL. Save and compress all of these files in a folder called audio.
 
 Now, each of the SPH files are about 20s long. We can't use such huge files for processing since each of the files will have multiple phrase-endings. Hence, we need to reduce it to smaller frames that are 25ms long, with a stride of 20ms. Use 2_Jupyter_SpeechData.py to extract these frames, and save this information in speech_bursc_output.xlsx which has the following columns: ['ID','NAME','START_TIME', 'END_TIME']
+![image](https://github.com/user-attachments/assets/db1facf3-cae0-4e68-8e5a-73d7967b357c)
+
 
 
 > Next, let's look at how to process the annotation files.
@@ -29,6 +31,8 @@ The audio files are pretty straightforward, just bundle up all the WAV files and
 
 Next, we need a mapping between each of our audio frames and the corresponding annotation label. 
 We use 4_Jupyter_Label.py to build an excel file final_bursc_data.xlsx that has the following columns: ['ID', 'NAME','START_TIME', 'END_TIME', 'LABEL']
+![image](https://github.com/user-attachments/assets/4b91bc9e-9a0c-4ec4-93ac-f9bb9aaca669)
+
 We then deposit this excel file into a folder called text and compress it
 
 Finally, we place the compressed audio and text folder into a folder called BURSC_DATA_TRIAL and compress it, to get our final dataset folder after the initial preprocessing.
