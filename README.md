@@ -52,6 +52,7 @@ To run this on the Case HPC GPU, you will need to follow the following steps -
 3. Request for GPU access using the sbatch <script> command (For eg, "batch batchfile.sh"). I have attached two training scripts to this repo, batchfile.sh and training.sh. Batchfile allows you to run these codes interactively in a Jupyter Notebook. The catch here is that you will need to stay connected to the Case VPN the entire time. training.sh is a workaround for that, which essentially derives from batchfile.sh, but allows you to run the .py file independently, without reliance on the VPN being connected.
 4. Once you run the sbatch command, you may want to check the status of your request by running the squeue | grep <accountID> (For eg, "squeue | grep pss107")
 5. For the interactive jupyter notebook users only: Once you have a GPU assigned (note your assigned GPU number), you can setup local port forwarding to access the notebook on your system using the "ssh -J <accountID>@pioneer.case.edu -L 8888:localhost:8888 -4 <accountID>@gput0<assignedGPUNumber>"). Then navigate to localhost:8888 on your system and you'll see the jupyter notebook!
+6. It takes about ~2 hours for 5 epochs, but it achieves an accuracy of just about 35-37% with 5 epochs, which is slightly above random, so the model requires training for >10 epochs at the very least so do estimate and allocate enough time for training the model.
 
 
 
