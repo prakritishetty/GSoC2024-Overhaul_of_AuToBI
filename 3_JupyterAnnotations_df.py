@@ -23,7 +23,7 @@ print("Extraction complete!")
 
 directory = './BURSC_FINAL/BURSC_FINAL'
 
-
+# Iterate through all files in the directory
 for filename in glob.glob(directory+ '/*' ):
   # print()
   with open(filename) as f:
