@@ -4,6 +4,8 @@ Hi everyone!
 I'm Prakriti Shetty, a first year Masters in Computer Science student at the University of Massachusetts Amherst.
 This is my code documentation for my GSoC 2024 project on the Automatic Detection and Classification of Prosodic Events in Spoken Language. It is an attempt to be an overhaul to the AuToBI system first proposed by Andrew Rosenberg in his PhD thesis at Columbia University, with advanced state-of-the-art algorithms as of today.
 
+For a detailed walkthrough of my documentation of entire GSoC 2024 program, this is a link to my blog: https://medium.com/@prakritishetty/gsoc-2024-experience-with-red-hen-labs-8dbf3e54056f
+
 ## How to run the code and reproduce the results
 
 ### Dataset Preprocessing
